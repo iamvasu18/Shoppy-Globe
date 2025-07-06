@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  padding: 2rem;
+}
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(to right, #222, #444);
+  padding: 1rem 2rem;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo a {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+}
+
+.logo-bold {
+  color: #fff;
+}
+
+.logo-globe {
+  color: #f9a825;
+  margin-left: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: #eee;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f9a825;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  width: 200px;
+  font-size: 0.9rem;
+  background-color: #fff; 
+  color: #333;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.cart-link {
+  color: #f9a825;
+  font-weight: bold;
+}
+
+/* -------------------
+   Product List & Card
+-------------------- */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* -------------------
+   Buttons
+-------------------- */
+button {
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+/* -------------------
+   Cart Items
+-------------------- */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+/* -------------------
+   Responsive (optional)
+-------------------- */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  font-weight: bold;
+  color: #eee;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  padding: 0.5rem 1rem;
+  top: 2rem;
+  left: 0;
+  border-radius: 5px;
+  z-index: 1000;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu a {
+  color: white;
+  white-space: nowrap;
+}
+/* Ensure dropdown aligns like other nav links */
+.nav-item {
+  padding: 0.5rem 0;
+  position: relative;
+}
